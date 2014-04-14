@@ -9,8 +9,6 @@ HUNDRED = "hundred"
 
 def checkio(number):
     output = []
-    if number == 0:
-        return FIRST_TEN[0]
 
     units = number%10
     number /= 10
