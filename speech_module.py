@@ -43,4 +43,9 @@ def checkio(number):
 
 #These "asserts" using only for self-checking and not necessary for auto-testing
 if __name__ == '__main__':
-    print checkio(100)
+    assert checkio(4) == 'four', "1st example"   
+    assert checkio(133) == 'one hundred thirty three', "2nd example"
+    assert checkio(12) == 'twelve', "3rd example"
+    assert checkio(101) == 'one hundred one', "4th example"
+    assert checkio(212) == 'two hundred twelve', "5th example"
+    assert checkio(40) == 'forty', "6th example"
