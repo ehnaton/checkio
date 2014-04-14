@@ -23,33 +23,26 @@ def checkio(number):
     if hundrends != 0:
         if tens == 1:
             return FIRST_TEN[hundrends] + " " + HUNDRED + " " + SECOND_TEN[units ]
-            print "*"
         elif tens == 0 and FIRST_TEN[units] != "zero":
             return FIRST_TEN[hundrends] + " " + HUNDRED + " " + FIRST_TEN[units]
         elif tens == 0 and FIRST_TEN[units] == "zero":
             return FIRST_TEN[hundrends] + " " + HUNDRED 
-            print "**"
         elif tens != 1 and tens != 0 and FIRST_TEN[units] != "zero":
             return FIRST_TEN[hundrends] + " " + HUNDRED + " " + OTHER_TENS[tens-2] + " " + FIRST_TEN[units]
         else:
             return FIRST_TEN[hundrends] + " " + HUNDRED + " " + OTHER_TENS[tens-2] 
-            print "***"
     elif hundrends == 0:
         if tens != 1 and tens != 0:
             if FIRST_TEN[units] == "zero":
                 return OTHER_TENS[tens-2] 
             else:
                 return OTHER_TENS[tens-2] + " " + FIRST_TEN[units]
-            print "#"
         elif tens == 0:
             return FIRST_TEN[units]
-            print "##"
         else:
             return SECOND_TEN[units]
-            print "###"
 
 
-    #print output
 #These "asserts" using only for self-checking and not necessary for auto-testing
 if __name__ == '__main__':
     print checkio(100)
